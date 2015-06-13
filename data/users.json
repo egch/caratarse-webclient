@@ -1,0 +1,147 @@
+{
+  "linksByRel": {
+    "self": [
+      {
+        "attributes": {
+          "rel": "self",
+          "href": "http://localhost:8081/users"
+        }
+      }
+    ]
+  },
+  "allLinks": [
+    {
+      "attributes": {
+        "rel": "self",
+        "href": "http://localhost:8081/users"
+      }
+    }
+  ],
+  "properties": {},
+  "resources": {
+    "users": [
+      {
+        "linksByRel": {
+          "self": [
+            {
+              "attributes": {
+                "rel": "self",
+                "href": "http://localhost:8081/users/a1ab82a6-c8ce-4723-8532-777c4b05d03c"
+              }
+            }
+          ],
+          "userServices": [
+            {
+              "attributes": {
+                "rel": "userServices",
+                "href": "http://localhost:8081/users/a1ab82a6-c8ce-4723-8532-777c4b05d03c/services"
+              }
+            }
+          ]
+        },
+        "allLinks": [
+          {
+            "attributes": {
+              "rel": "self",
+              "href": "http://localhost:8081/users/a1ab82a6-c8ce-4723-8532-777c4b05d03c"
+            }
+          },
+          {
+            "attributes": {
+              "rel": "userServices",
+              "href": "http://localhost:8081/users/a1ab82a6-c8ce-4723-8532-777c4b05d03c/services"
+            }
+          }
+        ],
+        "properties": {
+          "uuid": "a1ab82a6-c8ce-4723-8532-777c4b05d03c",
+          "username": "lucio",
+          "password": "lucioPwd",
+          "creationDate": "2015-06-09T23:14:25.382Z",
+          "updatedDate": "2015-06-09T23:14:25.382Z",
+          "userServices": [
+            {
+              "id": 1
+            }
+          ],
+          "userAuthorizations": [
+            {
+              "id": 1,
+              "permissions": {
+                "read": true,
+                "write": true,
+                "execute": true
+              }
+            }
+          ],
+          "id": 1
+        },
+        "arrayLinkRels": [],
+        "arrayResourceRels": []
+      },
+      {
+        "linksByRel": {
+          "self": [
+            {
+              "attributes": {
+                "rel": "self",
+                "href": "http://localhost:8081/users/dab53c6c-c413-4b4e-bf00-982d2344c806"
+              }
+            }
+          ],
+          "userServices": [
+            {
+              "attributes": {
+                "rel": "userServices",
+                "href": "http://localhost:8081/users/dab53c6c-c413-4b4e-bf00-982d2344c806/services"
+              }
+            }
+          ]
+        },
+        "allLinks": [
+          {
+            "attributes": {
+              "rel": "self",
+              "href": "http://localhost:8081/users/dab53c6c-c413-4b4e-bf00-982d2344c806"
+            }
+          },
+          {
+            "attributes": {
+              "rel": "userServices",
+              "href": "http://localhost:8081/users/dab53c6c-c413-4b4e-bf00-982d2344c806/services"
+            }
+          }
+        ],
+        "properties": {
+          "uuid": "dab53c6c-c413-4b4e-bf00-982d2344c806",
+          "username": "michele",
+          "password": "michelePwd",
+          "creationDate": "2015-06-09T23:14:25.412Z",
+          "updatedDate": "2015-06-09T23:14:25.412Z",
+          "userServices": [
+            {
+              "id": 2
+            }
+          ],
+          "userAuthorizations": [
+            {
+              "id": 2,
+              "permissions": {
+                "read": true,
+                "write": true,
+                "execute": true
+              }
+            }
+          ],
+          "id": 2
+        },
+        "arrayLinkRels": [],
+        "arrayResourceRels": []
+      }
+    ]
+  },
+  "arrayLinkRels": [],
+  "arrayResourceRels": [
+    "users"
+  ]
+}
