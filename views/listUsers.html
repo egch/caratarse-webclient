@@ -2,17 +2,15 @@
 {{data.resources.users[0].properties.username}}-->
 
 <h3>Users</h3>
-
-
 <div class="container-fluid">
     <div class="row">
 
         <div class="col-md-6">
             <ul class="list-group">
-                <li class="list-group-item" ng-repeat="user in data.resources.users | filter:query | orderBy:orderProp">
+                <li class="list-group-item" ng-repeat="user in data.resources.users">
 
-                    <h4>{{user.properties.username}}</h4>
-                    <h4>{{user.properties.creationDate}}</h4>
+                    <h4>username: {{user.properties.username}}</h4>
+                    <h4>creation Date: {{user.properties.creationDate}}</h4>
                 </li>
             </ul>
         </div>
