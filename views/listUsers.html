@@ -10,7 +10,11 @@
                 <li class="list-group-item" ng-repeat="user in data.resources.users">
 
                     <h4>username: {{user.properties.username}}</h4>
-                    <h4>creation Date: {{user.properties.creationDate}}</h4>
+                    <h4>creation Date: {{user.properties.creationDate | date:'medium'}}</h4>
+                    <h4 ng-show="user.properties.deleted">deleted Date: {{user.properties.deleted | date:'medium'}}</h4>
+                    <h4>uuid: {{user.properties.uuid}}</h4>
+                    <a href='#/deleteUser/{{user.properties.uuid}}' class='btn btn-danger'>Delete</a>
+                  <!--  <a href='' class="btn btn-warning">Update</a>-->
                 </li>
             </ul>
         </div>
