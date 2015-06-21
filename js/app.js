@@ -19,7 +19,14 @@ caratarseApp.controller('DeleteUserController',
         User.delete({uuid:$routeParams.uuid}, function()
         {
             $location.path('/users');
-        });
+        },
+        function(error)
+        {
+            console.error('error while deleting '+$routeParams.uuid);
+            $location.path('/error');
+
+        }
+        );
 
 });
 
@@ -32,6 +39,9 @@ caratarseApp.config(['$routeProvider',
         $routeProvider.
             when('/', {
                 templateUrl: 'views/home.html'
+            }).
+            when('/error', {
+                templateUrl: 'views/error.html'
             }).
             when('/users', {
                 controller:  'ListUsersController',
