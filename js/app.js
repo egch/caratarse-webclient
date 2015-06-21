@@ -15,8 +15,11 @@ caratarseApp.controller('ListUsersController',
 
 
 caratarseApp.controller('DeleteUserController',
-    function ($scope, User, $routeParams) {
-        User.delete({uuid:$routeParams.uuid});
+    function ($scope, User, $routeParams, $location) {
+        User.delete({uuid:$routeParams.uuid}, function()
+        {
+            $location.path('/users');
+        });
 
 });
 
