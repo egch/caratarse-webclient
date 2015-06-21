@@ -7,8 +7,9 @@ caratarseApp.factory('User', function($resource){
 });
 
 caratarseApp.controller('ListUsersController',
-    function ($scope, User) {
+    function ($scope, User, $routeParams) {
         User.get(function(data) {
+            $scope.submissionSuccess = ($routeParams.submissionSuccess === "true");
             $scope.data = data;
         });
 });
@@ -18,7 +19,9 @@ caratarseApp.controller('DeleteUserController',
     function ($scope, User, $routeParams, $location) {
         User.delete({uuid:$routeParams.uuid}, function()
         {
-            $location.path('/users');
+            $scope.submissionSuccess=true;
+            $location.path('/users/true');
+
         },
         function(error)
         {
@@ -43,7 +46,7 @@ caratarseApp.config(['$routeProvider',
             when('/error', {
                 templateUrl: 'views/error.html'
             }).
-            when('/users', {
+            when('/users/:submissionSuccess', {
                 controller:  'ListUsersController',
                 templateUrl: 'views/listUsers.html'
             }).
