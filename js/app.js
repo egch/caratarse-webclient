@@ -30,8 +30,22 @@ caratarseApp.controller('DeleteUserController',
 
         }
         );
-
 });
+
+caratarseApp.controller('NewUserUserController',
+    function ($scope, User, $location) {
+
+      $scope.addUser = function() {
+        console.log('username: '+$scope.user.username);
+        User.save($scope.user, function()
+             {
+                 $scope.submissionSuccess=true;
+                 $location.path('/users/true');
+
+             });
+      }
+});
+
 
 
 
@@ -53,7 +67,10 @@ caratarseApp.config(['$routeProvider',
             when('/deleteUser/:uuid', {
                 controller:  'DeleteUserController',
                 templateUrl: 'views/home.html'
-
+            }).
+            when('/newUser', {
+                controller:  'NewUserUserController',
+                templateUrl: 'views/newUser.html'
             }).
             otherwise({
                 redirectTo: '/'
