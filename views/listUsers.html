@@ -1,6 +1,3 @@
-<!--
-{{data.resources.users[0].properties.username}}-->
-
 <h3>Users</h3>
 <div class="container-fluid">
     <div ng-show="submissionSuccess" class="alert alert-success fade in">
@@ -11,13 +8,13 @@
 
         <div class="col-md-6">
             <ul class="list-group">
-                <li class="list-group-item" ng-repeat="user in data.resources.users">
+                <li class="list-group-item" ng-repeat="user in data._embedded.users">
 
-                    <h4>username: {{user.properties.username}}</h4>
-                    <h4>creation Date: {{user.properties.creationDate | date:'medium'}}</h4>
-                    <h4 ng-show="user.properties.deleted">deleted Date: {{user.properties.deleted | date:'medium'}}</h4>
-                    <h4>uuid: {{user.properties.uuid}}</h4>
-                    <a href='#/deleteUser/{{user.properties.uuid}}' class='btn btn-danger'>Delete</a>
+                    <h4>username: {{user.username}}</h4>
+                    <h4>creation Date: {{user.creationDate | date:'medium'}}</h4>
+                    <h4 ng-show="user.deleted">deleted Date: {{user.deleted | date:'medium'}}</h4>
+                    <h4>uuid: {{user.uuid}}</h4>
+                    <a href='#/deleteUser/{{user.uuid}}' class='btn btn-danger'>Delete</a>
                   <!--  <a href='' class="btn btn-warning">Update</a>-->
                 </li>
             </ul>
