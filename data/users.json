@@ -9,25 +9,60 @@
       {
         "_links": {
           "userServices": {
-            "href": "http://localhost:8081/users/a1ab82a6-c8ce-4723-8532-777c4b05d03c/services"
+            "href": "http://localhost:8081/users/{userUuid}/services",
+            "templated": true
           },
           "self": {
-            "href": "http://localhost:8081/users/a1ab82a6-c8ce-4723-8532-777c4b05d03c"
+            "href": "http://localhost:8081/users/{userUuid}",
+            "templated": true
           }
         },
         "uuid": "a1ab82a6-c8ce-4723-8532-777c4b05d03c",
         "username": "lucio",
         "password": "lucioPwd",
-        "creationDate": "2015-07-23T00:43:56.139Z",
-        "updatedDate": "2015-07-23T00:43:56.139Z",
+        "creationDate": "2015-08-11T22:20:23.863Z",
+        "updatedDate": "2015-08-11T22:20:23.863Z",
         "userServices": [
           {
             "id": 1
+          },
+          {
+            "id": 1
+          },
+          {
+            "id": 2
+          },
+          {
+            "id": 2
           }
         ],
         "userAuthorizations": [
           {
             "id": 1,
+            "permissions": {
+              "read": true,
+              "write": true,
+              "execute": true
+            }
+          },
+          {
+            "id": 1,
+            "permissions": {
+              "read": true,
+              "write": true,
+              "execute": true
+            }
+          },
+          {
+            "id": 2,
+            "permissions": {
+              "read": true,
+              "write": true,
+              "execute": true
+            }
+          },
+          {
+            "id": 2,
             "permissions": {
               "read": true,
               "write": true,
@@ -40,29 +75,58 @@
       {
         "_links": {
           "userServices": {
-            "href": "http://localhost:8081/users/e1ea4dab-8ca1-4ee1-b7ce-b660709221c1/services"
+            "href": "http://localhost:8081/users/{userUuid}/services",
+            "templated": true
           },
           "self": {
-            "href": "http://localhost:8081/users/e1ea4dab-8ca1-4ee1-b7ce-b660709221c1"
+            "href": "http://localhost:8081/users/{userUuid}",
+            "templated": true
           }
         },
-        "uuid": "e1ea4dab-8ca1-4ee1-b7ce-b660709221c1",
+        "uuid": "c46ede1c-d041-400f-9a12-5bb27243d17b",
         "username": "michele",
         "password": "michelePwd",
-        "creationDate": "2015-07-23T00:43:56.159Z",
-        "updatedDate": "2015-07-23T00:43:56.159Z",
+        "creationDate": "2015-08-11T22:20:23.919Z",
+        "updatedDate": "2015-08-11T22:20:23.919Z",
         "userServices": [
           {
-            "id": 2
+            "id": 3
+          },
+          {
+            "id": 3
           }
         ],
         "userAuthorizations": [
           {
-            "id": 2,
+            "id": 3,
             "permissions": {
               "read": true,
               "write": true,
               "execute": true
+            }
+          },
+          {
+            "id": 3,
+            "permissions": {
+              "read": true,
+              "write": true,
+              "execute": true
+            }
+          },
+          {
+            "id": 4,
+            "permissions": {
+              "read": true,
+              "write": false,
+              "execute": false
+            }
+          },
+          {
+            "id": 4,
+            "permissions": {
+              "read": true,
+              "write": false,
+              "execute": false
             }
           }
         ],

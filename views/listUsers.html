@@ -4,6 +4,13 @@
         <a  class="close" data-dismiss="alert">&times;</a>
         <strong>Success!</strong>Your action has been completed successfully.
     </div>
+
+    <div ng-show="submissionError" class="alert alert-danger fade in">
+        <a  class="close" data-dismiss="alert">&times;</a>
+        <strong>Error!</strong>
+        <h5>A technical problem has been occurred!</h5>
+    </div>
+
     <div class="row">
 
         <div class="col-md-6">
@@ -12,7 +19,7 @@
 
                     <h4>username: {{user.username}}</h4>
                     <h4>creation Date: {{user.creationDate | date:'medium'}}</h4>
-                    <h4 ng-show="user.deleted">deleted Date: {{user.deleted | date:'medium'}}</h4>
+                    <h4>updated Date: {{user.updatedDate | date:'medium'}}</h4>
                     <h4>uuid: {{user.uuid}}</h4>
                     <a href='#/deleteUser/{{user.uuid}}' class='btn btn-danger'>Delete</a>
                   <!--  <a href='' class="btn btn-warning">Update</a>-->
