@@ -29,6 +29,7 @@ caratarseApp.controller('ListUsersController',
             $scope.submissionSuccess = Store.get()===true;
             $scope.submissionError = Store.get()==='error';
             $scope.data = data;
+            Store.set("");
         });
 });
 
@@ -49,7 +50,6 @@ caratarseApp.controller('DeleteUserController',
 
 caratarseApp.controller('NewUserUserController',
     function ($scope, User, Store, $location) {
-
       $scope.addUser = function() {
         console.log('username: '+$scope.user.username);
         User.save($scope.user, function()
